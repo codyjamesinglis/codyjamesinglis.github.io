@@ -311,18 +311,18 @@
     src="home.html"
     title="Page content">
   </iframe>
-    
 </div>
-  <script>
+  
+<script>
     var hamburgerBtn = document.getElementById('hamburger-btn');
-    var mobileNav = document.getElementById('mobile-nav');
+    var mobileNav    = document.getElementById('mobile-nav');
 
     hamburgerBtn.addEventListener('click', function() {
-      var isOpen = mobileNav.classList.toggle('open);
+      var isOpen = mobileNav.classList.toggle('open');
       hamburgerBtn.classList.toggle('open', isOpen);
       hamburgerBtn.setAttribute('aria-expanded', String(isOpen));
     });
-    
+
     function loadPage(url, el, isMobile) {
       event.preventDefault();
 
@@ -332,7 +332,7 @@
       // Clear active state in both navs, then set on clicked link
       document.querySelectorAll('.nav-link').forEach(function(link) {
         link.classList.remove('active');
-        if (link.getAttribute('href') === url) link.classList.add('active);
+        if (link.getAttribute('href') === url) link.classList.add('active');
       });
 
       // Close mobile menu after selection
@@ -343,6 +343,6 @@
       }
     }
   </script>
-
+  
 </body>
 </html>
