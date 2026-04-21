@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cody Inglis</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      font-family: 'EB Garamond', Georgia, serif;
+      background: #fffaf1;
+      color: #222;
+    }
+
+    /* ── Sidebar ───────────────────────────────────────────────────── */
+
+    .sidebar {
+      width: 25%;
+      min-width: 180px;
+      max-width: 260px;
+      height: 100vh;
+      position: sticky;
+      top: 0;
+      background: #fffaf1;
+      border-right: 1px solid #e8e5e0;
+      display: flex;
+      flex-direction: column;
+      padding: 2.75rem 2rem 2rem;
+      flex-shrink: 0;
+    }
+
+    .sidebar-name {
+      margin-bottom: 0.25rem;
+      font-size: 1.5rem;
+      font-weight: normal;
+      color: #111;
+      line-height: 1.4;
+    }
+
+    .sidebar-title {
+      font-family: 'IBM Plex Mono', Courier, monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.04em;
+      color: #aaa;
+      line-height: 1.5;
+      margin-bottom: 2.5rem;
+    }
+
+    /* ── Navigation ────────────────────────────────────────────────── */
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.45rem 0;
+      font-family: 'IBM Plex Mono', Courier, monospace;
+      font-size: 1rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #aaa;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      background: none;
+      width: 100%;
+      text-align: left;
+      transition: color 0.15s;
+    }
+
+    .nav-link:hover {
+      color: #333;
+    }
+
+    .nav-link.active {
+      color: #111;
+    }
+
+    /* CSS triangle arrow pointing right */
+    .nav-arrow {
+      width: 0;
+      height: 0;
+      border-top: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+      border-left: 5px solid #111;
+      opacity: 0;
+      transition: opacity 0.15s;
+      flex-shrink: 0;
+    }
+
+    .nav-link.active .nav-arrow {
+      opacity: 1;
+    }
+
+    /* ── Content pane ──────────────────────────────────────────────── */
+
+    #content-frame {
+      flex: 1;
+      height: 100vh;
+      border: none;
+      display: block;
+    }
+
+    /* ── Footer area in sidebar ────────────────────────────────────── */
+
+    .sidebar-footer {
+      margin-top: auto;
+      font-family: 'IBM Plex Mono', Courier, monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.03em;
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    .sidebar-footer a {
+      color: #bbb;
+      text-decoration: none;
+    }
+
+    .sidebar-footer a:hover {
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <aside class="sidebar">
+    <p class="sidebar-name">Cody James Inglis</p>
+    <p class="sidebar-title">
+      Research Affiliate<br>
+      CEU Democracy Institute
+    </p>
+
+    <nav>
+      <a class="nav-link active" onclick="loadPage('home.html', this)" href="home.html">
+        <span>Home</span>
+        <span class="nav-arrow"></span>
+      </a>
+      <a class="nav-link" onclick="loadPage('cv.html', this)" href="cv.html">
+        <span>CV & Publications</span>
+        <span class="nav-arrow"></span>
+      </a>
+      <!-- <a class="nav-link" onclick="loadPage('publications.html', this)" href="publications.html">
+        <span>Publications</span>
+        <span class="nav-arrow"></span>
+      </a> --> <!-- BETTER TO CONSOLIDATE CV + PUBLICATIONS -->
+      <a class="nav-link" onclick="loadPage('notebook.html', this)" href="notebook.html">
+        <span>Notebook</span>
+        <span class="nav-arrow"></span>
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="https://democracyinstitute.ceu.edu/people/cody-inglis"
+         target="_blank" rel="noopener noreferrer">CEU Profile</a>
+      &nbsp;·&nbsp;
+      <a href="https://orcid.org/0000-0003-4223-2232"
+         target="_blank" rel="noopener noreferrer">ORCID</a>
+    </div>
+  </aside>
+
+  <iframe
+    id="content-frame"
+    src="home.html"
+    title="Page content">
+  </iframe>
+
+  <script>
+    function loadPage(url, el) {
+      event.preventDefault();
+      document.getElementById('content-frame').src = url;
+      document.querySelectorAll('.nav-link').forEach(function(link) {
+        link.classList.remove('active');
+      });
+      el.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cjinglis.info - cv + publications</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #222;
+      background: #fffaf1;
+      padding: 3rem 3.5rem 4rem;
+      max-width: 720px;
+    }
+
+    .cv-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid #e8e5e0;
+      margin-bottom: 2.5rem;
+    }
+
+    .download-link {
+      font-family: 'IBM Plex Mono', Courier, monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #888;
+      text-decoration: none;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 1px;
+    }
+
+    .download-link:hover {
+      color: #333;
+      border-bottom-color: #666;
+    }
+
+    section {
+      margin-bottom: 2.25rem;
+    }
+
+    .section-heading {
+      font-family: 'IBM Plex Mono', Courier, monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #eee;
+    }
+
+    .cv-row {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .cv-year {
+      font-family: 'IBM Plex Mono', Courier, monospace;
+      font-size: 0.82rem;
+      color: #999;
+      min-width: 120px;
+      flex-shrink: 0;
+      padding-top: 0.15rem;
+      line-height: 1.6;
+    }
+
+    .cv-detail {
+      font-size: 0.95rem;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    .cv-detail em {
+      font-style: italic;
+    }
+
+    .pub-entry {
+      font-size: 0.95rem;
+      color: #333;
+      line-height: 1.75;
+      margin-bottom: 0.75rem;
+      padding-left: 1.5rem;
+      text-indent: -1.5rem;
+    }
+    
+    ol {
+      list-style: none;
+      counter-reset: pub-counter;
+    }
+
+    ol li {
+      counter-increment: pub-counter;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #333;
+      padding-left: 1.75rem;
+      text-indent: -1.75rem;
+      margin-bottom: 1rem;
+    }
+
+    ol li::before {
+      content: counter(pub-counter) ".";
+      font-family: 'IBM Plex Mono', Courier, monospace;
+      font-size: 0.78rem;
+      color: #bbb;
+      margin-right: 0.6rem;
+      display: inline-block;
+      width: 1rem;
+      text-align: right;
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    a {
+      color: #555;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      color: #111;
+    }
+
+    .tag {
+      display: inline-block;
+      font-family: 'IBM Plex Mono', Courier, monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #aaa;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      padding: 1px 5px;
+      margin-left: 0.4rem;
+      vertical-align: middle;
+      position: relative;
+      top: -1px;
+    }
+
+    .lang-row {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .lang-name {
+      font-size: 0.95rem;
+      color: #333;
+      min-width: 140px;
+    }
+
+    .lang-level {
+      font-family: 'IBM Plex Mono', Courier, monospace;
+      font-size: 0.82rem;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cv-header">
+    <a href="assets/cv.pdf" download class="download-link">Download Detailed CV as PDF</a>
+  </div>
+
+  <section>
+    <div class="section-heading">Current Affiliation</div>
+
+    <div class="cv-row">
+      <div class="cv-year">2025–Present</div>
+      <div class="cv-detail">Research Affiliate, CEU Democracy Institute<br>Budapest, Hungary</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-heading">Education</div>
+
+    <div class="cv-row">
+      <div class="cv-year">2026</div>
+      <div class="cv-detail">PhD, Comparative History<br>Central European University, Vienna, Austria</div>
+    </div>
+    <div class="cv-row">
+      <div class="cv-year">2018</div>
+      <div class="cv-detail">MA, Comparative History<br>Central European University, Budapest, Hungary</div>
+    </div>
+    <div class="cv-row">
+      <div class="cv-year">2016</div>
+      <div class="cv-detail">BA, Political Science, and BA, Philosophy<br>Arizona State University, Phoenix, Arizona</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-heading">Publications</div>
+
+    <section>
+    <div class="section-heading">Book Chapters</div>
+    <ol>
+      <li>
+        “Socialism and decentralization: The Marxist ambiguity toward federalism in the late Habsburg Empire, 1899–1914.”
+        In <em>From Empire to Federation in Eurasia: Ideas and Practices of Diversity Management</em>,
+        edited by Ivan Sablin and Egas Moniz Bandeira, 39–62. Abingdon: Routledge, 2026.
+        <br>
+        <a href="https://www.routledge.com/From-Empire-to-Federation-in-Eurasia-Ideas-and-Practices-of-Diversity-Management/Sablin-Bandeira/p/book/9781032993591" target="_blank">Available through Routledge here.</a>
+      </li>
+      <li>
+        “Albin Prepeluh: Why Are We Republicans?”
+        In <em>Political Transformations in the Interwar Period: The Case of Slovenian Political Thought</em>,
+        edited by Isidora Grubački and Marko Zajc, 91–104. Ljubljana: Institute of Contemporary History, 2026.
+        <br>
+        <a href="https://omp.inz.si/index.php/zalozba/sl/catalog/book/164" target="_blank">Available in open access here.</a>
+      </li>
+      <li>
+        “Etbin Kristan: Un-American Socialism.”
+        In <em>Political Transformations in the Interwar Period: The Case of Slovenian Political Thought</em>,
+        edited by Isidora Grubački and Marko Zajc, 171–86. Ljubljana: Institute of Contemporary History, 2026.
+         <br>
+         <a href="https://omp.inz.si/index.php/zalozba/sl/catalog/book/164" target="_blank">Available in open access here.</a>
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <div class="section-heading">Journal Articles</div>
+    <ol>
+      <li>
+        “The Languages of Monarchism in Interwar Yugoslavia, 1918–1941: Variations on a Theme.”
+        <em>History of European Ideas</em> (pre-print).
+        <a href="https://doi.org/10.1080/01916599.2023.2233061" target="_blank" rel="noopener noreferrer">doi:10.1080/01916599.2023.2233061</a>
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <div class="section-heading">Other Writing</div>
+    <ol>
+      <li>
+        “Democracy or Popular Government? The Political Thought of Mihály Táncsics in the Vormärz.”
+        <em>Democratic Identity in the Age of Revolutions</em> (blog series).
+        University of Oxford, Centre for Intellectual History, February 21, 2025.
+        <a href="https://intellectualhistory.web.ox.ac.uk/article/democracy-or-popular-government-the-political-thought-of-mihaly-tancsics-in-the-vormarz"
+           target="_blank" rel="noopener noreferrer">Link</a>
+      </li>
+    </ol>
+  </section>
+  </section>
+
+  <!-- <section>
+    <div class="section-heading">Visiting Fellowships</div>
+
+    <div class="cv-row">
+      <div class="cv-year">Feb.–Mar. 2024</div>
+      <div class="cv-detail">Open Society Archives, Budapest, Hungary</div>
+    </div>
+    <div class="cv-row">
+      <div class="cv-year">Oct.–Nov. 2023</div>
+      <div class="cv-detail">Department of History, University of Ljubljana, Ljubljana, Slovenia</div>
+    </div>
+    <div class="cv-row">
+      <div class="cv-year">Oct.–Nov. 2022</div>
+      <div class="cv-detail">Institute for Contemporary History, Ljubljana, Slovenia</div>
+    </div>
+    <div class="cv-row">
+      <div class="cv-year">July 2021</div>
+      <div class="cv-detail">Institute of Cultural History, Slovenian Academy of Sciences and Arts, Ljubljana, Slovenia</div>
+    </div>
+    <div class="cv-row">
+      <div class="cv-year">Mar.–Apr. 2021</div>
+      <div class="cv-detail">Ivo Pilar Institute for Social Sciences, Zagreb, Croatia</div>
+    </div>
+  </section> -->
+
+  <section>
+    <div class="section-heading">Languages</div>
+
+    <div class="lang-row">
+      <span class="lang-name">English</span>
+      <span class="lang-level">Native</span>
+    </div>
+    <div class="lang-row">
+      <span class="lang-name">Hungarian</span>
+      <span class="lang-level">C1</span>
+    </div>
+    <div class="lang-row">
+      <span class="lang-name">German</span>
+      <span class="lang-level">B2</span>
+    </div>
+    <div class="lang-row">
+      <span class="lang-name">Serbo-Croatian</span>
+      <span class="lang-level">B1</span>
+    </div>
+    <div class="lang-row">
+      <span class="lang-name">Slovenian</span>
+      <span class="lang-level">B1</span>
+    </div>
+  </section>
+
+</body>
+</html>
